@@ -1,27 +1,26 @@
 package com.example.notestakingapp.model;
 
 import android.content.Intent;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.notestakingapp.R;
 import com.example.notestakingapp.note.NoteDetails;
 
-//import net.smallacademy.firenote.note.NoteDetails;
-//import net.smallacademy.firenote.R;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import butterknife.BindView;
+
+//import net.smallacademy.firenote.note.NoteDetails;
+//import net.smallacademy.firenote.R;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     List<String> titles;
@@ -86,14 +85,17 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView noteTitle,noteContent;
+        @BindView(R.id.titles)
+        TextView noteTitle;
+        @BindView(R.id.content)
+        TextView noteContent;
         View view;
         CardView mCardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            noteTitle = itemView.findViewById(R.id.titles);
-            noteContent = itemView.findViewById(R.id.content);
+//            noteTitle = itemView.findViewById(R.id.titles);
+//            noteContent = itemView.findViewById(R.id.content);
             mCardView = itemView.findViewById(R.id.noteCard);
             view = itemView;
         }
