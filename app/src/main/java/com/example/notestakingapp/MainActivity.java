@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 final int code = getRandomColor();
                 holder.mCardView.setCardBackgroundColor(holder.view.getResources().getColor(code));
                 final String docId = noteAdapter.getSnapshots().getSnapshot(position).getId();
-
+// OnClick Lister
                 holder.view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
