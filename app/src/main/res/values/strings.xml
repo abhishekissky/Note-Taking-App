@@ -13,4 +13,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_note_details">Note Detail</string>
     <string name="title_activity_edit_note">EditNote</string>
+
+    <string name="login">Login Here</string>
 </resources>
